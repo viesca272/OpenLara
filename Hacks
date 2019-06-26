@@ -1,0 +1,127 @@
+ls -lR --block-size=1 
+.:
+total 537600
+dr-x------ 1 i30817 i30817   2048 out  4  1996 deldata
+dr-x------ 1 i30817 i30817   2048 out  4  1996 demodata
+dr-x------ 1 i30817 i30817   2048 set 26  1996 fmv
+dr-x------ 1 i30817 i30817   2048 out  4  1996 psxdata
+-r-------- 1 i30817 i30817 501760 dez 13  2014 sles_000.24
+-r-------- 1 i30817 i30817     67 out 24  1996 system.cnf
+-r-------- 1 i30817 i30817  27066 out 18  1995 warning.raw
+
+./deldata:
+total 584704
+-r-------- 1 i30817 i30817 42499 dez  6  2014 amertit.raw
+-r-------- 1 i30817 i30817 59448 dez  6  2014 atlanloa.raw
+-r-------- 1 i30817 i30817 70938 out  2  1996 aztecloa.raw
+-r-------- 1 i30817 i30817 42831 dez  6  2014 cred1.raw
+-r-------- 1 i30817 i30817 42831 dez  6  2014 cred.raw
+-r-------- 1 i30817 i30817 42171 dez  6  2014 egyptloa.raw
+-r-------- 1 i30817 i30817 28569 dez  6  2014 end.raw
+-r-------- 1 i30817 i30817 65536 dez  9  1995 fmvtab.dat
+-r-------- 1 i30817 i30817 65010 dez  6  2014 greekloa.raw
+-r-------- 1 i30817 i30817 79409 out  2  1996 gymload.raw
+-r-------- 1 i30817 i30817 42499 dez  6  2014 psxtit.raw
+
+./demodata:
+total 0
+
+./fmv:
+total 0
+
+./psxdata:
+total 10947584
+-r-------- 1 i30817 i30817  722402 out 16  1996 cut1.psx
+-r-------- 1 i30817 i30817 1074234 out 16  1996 gym.psx
+-r-------- 1 i30817 i30817 1796620 dez  4  2014 level1.psx
+-r-------- 1 i30817 i30817 1786356 dez  6  2014 level2.psx
+-r-------- 1 i30817 i30817 1744836 dez  6  2014 level3a.psx
+-r-------- 1 i30817 i30817 1690644 dez  6  2014 level3b.psx
+-r-------- 1 i30817 i30817 1621970 out 16  1996 level4.psx
+-r-------- 1 i30817 i30817  508614 out 16  1996 title.psx
+
+find .  -exec md5sum {} \;
+md5sum: .: Is a directory
+c26107ea4b04798295c74ca570ecba53  ./system.cnf
+md5sum: ./deldata: Is a directory
+a9ae8982ef33abc56c66f11344e926b7  ./deldata/amertit.raw
+93d1514b13479fa3ac149a312f3c7a2e  ./deldata/atlanloa.raw
+0bbcbb88378a8450dac69ae32cb38168  ./deldata/aztecloa.raw
+f7c020c73dcd8a68985dacc4ad0ad7ec  ./deldata/cred.raw
+b45357f56bbb3ae618c079249e29a9a5  ./deldata/egyptloa.raw
+b060f8f347f984eec66393db8737a5c7  ./deldata/end.raw
+8cdb77e6de121a5d69487331d051a9e3  ./deldata/fmvtab.dat
+d25b8cf04f48d3a6bcde34ee29be6983  ./deldata/greekloa.raw
+15313a6c0ad54b7b423089ef91e0738b  ./deldata/gymload.raw
+a9ae8982ef33abc56c66f11344e926b7  ./deldata/psxtit.raw
+f7c020c73dcd8a68985dacc4ad0ad7ec  ./deldata/cred1.raw
+md5sum: ./demodata: Is a directory
+md5sum: ./fmv: Is a directory
+md5sum: ./psxdata: Is a directory
+11399d0df5d2cb27711f8beab0547413  ./psxdata/cut1.psx
+8b86e4916abc4fe80cd257a052a39066  ./psxdata/gym.psx
+723b78dbb5c7295be6fd020a7e068a53  ./psxdata/level1.psx
+cc48840cb28cb16b3ccae2fdff3fec4f  ./psxdata/level2.psx
+0469d18e2da464d55b2a8b13d177f540  ./psxdata/level3a.psx
+2a5da203d73e38ba6c6b01b6a5f3c949  ./psxdata/level3b.psx
+13306316fed203c802e95c4c593fefa9  ./psxdata/level4.psx
+ab590c951d08163c20e19762e0d0f044  ./psxdata/title.psx
+63ec551e9fbcfe88fd89f285f320ad1f  ./sles_000.24
+a9d63817ce5354ae5b059fc576a68810  ./warning.raw
+
+
+find .  -print -exec crc32 {} \;
+.
+/usr/bin/crc32: .: Is a directory
+./system.cnf
+9ff6874d
+./deldata
+/usr/bin/crc32: ./deldata: Is a directory
+./deldata/amertit.raw
+6595beea
+./deldata/atlanloa.raw
+62baa66b
+./deldata/aztecloa.raw
+ecdb8e72
+./deldata/cred.raw
+10419970
+./deldata/egyptloa.raw
+f27be1fa
+./deldata/end.raw
+96860f3d
+./deldata/fmvtab.dat
+4c491199
+./deldata/greekloa.raw
+4274cac6
+./deldata/gymload.raw
+4c3c32ce
+./deldata/psxtit.raw
+6595beea
+./deldata/cred1.raw
+10419970
+./demodata
+/usr/bin/crc32: ./demodata: Is a directory
+./fmv
+/usr/bin/crc32: ./fmv: Is a directory
+./psxdata
+/usr/bin/crc32: ./psxdata: Is a directory
+./psxdata/cut1.psx
+cdf6dc80
+./psxdata/gym.psx
+76f2034c
+./psxdata/level1.psx
+bae017f6
+./psxdata/level2.psx
+ca58f75a
+./psxdata/level3a.psx
+73abe293
+./psxdata/level3b.psx
+87a7b4a2
+./psxdata/level4.psx
+b5850fd1
+./psxdata/title.psx
+a6744241
+./sles_000.24
+3dd51f05
+./warning.raw
+ac29a627
